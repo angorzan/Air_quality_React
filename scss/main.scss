@@ -1,15 +1,16 @@
 body {
-  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   position: relative;
-
-
-
 
   background-image: url("http://alicekierre.com/wp-content/uploads/2013/04/Dandelion.jpg");
   //drawn by Alice Kierre http://alicekierre.com/portfolio//
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+body, button {
+  font-family: 'Raleway', 'Arial', sans-serif;
+
 }
 
 .visible {
