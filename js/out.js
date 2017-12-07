@@ -41052,15 +41052,15 @@ var AirQuality = function (_React$Component) {
                     null,
                     _react2.default.createElement(
                         'div',
-                        { className: 'page-header' },
+                        { className: 'container' },
                         _react2.default.createElement(
-                            'h4',
+                            'h2',
                             null,
                             'Check Air Quality'
                         ),
                         _react2.default.createElement(
                             'button',
-                            { onClick: this.handleClick, className: 'chartButton' },
+                            { onClick: this.handleClick, className: 'chartButton btn btn-info' },
                             'Get your position'
                         ),
                         this.state.chartData && _react2.default.createElement(
@@ -41068,21 +41068,44 @@ var AirQuality = function (_React$Component) {
                             null,
                             _react2.default.createElement(
                                 'div',
-                                { className: 'position' },
-                                'Your current position: lat: ',
-                                this.state.lat,
-                                'lon: ',
-                                this.state.lon
+                                { className: 'position container' },
+                                _react2.default.createElement(
+                                    'p',
+                                    null,
+                                    'Your current position: lat: ',
+                                    this.state.lat.toFixed(2)
+                                ),
+                                _react2.default.createElement(
+                                    'p',
+                                    null,
+                                    '  lon: ',
+                                    this.state.lon.toFixed(2),
+                                    ' '
+                                ),
+                                ' '
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'air' },
-                                'street: ',
-                                this.state.street,
-                                ' PM2.5 ',
-                                this.state.pm25,
-                                'PM10 ',
-                                this.state.pm10
+                                { className: 'air container' },
+                                _react2.default.createElement(
+                                    'p',
+                                    null,
+                                    'street: ',
+                                    this.state.street,
+                                    ' '
+                                ),
+                                _react2.default.createElement(
+                                    'p',
+                                    null,
+                                    ' Air quality: PM2.5  ',
+                                    this.state.pm25.toFixed(2)
+                                ),
+                                _react2.default.createElement(
+                                    'p',
+                                    null,
+                                    ' PM10  ',
+                                    this.state.pm10.toFixed(2)
+                                )
                             )
                         ),
                         _react2.default.createElement(_reactChartjs.Bar, { data: this.state.chartData, options: this.state.chartOptions })

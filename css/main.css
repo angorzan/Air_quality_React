@@ -7,6 +7,9 @@ body {
 body, button {
   font-family: 'Raleway', 'Arial', sans-serif; }
 
+.container {
+  width: 800px; }
+
 .visible {
   display: block; }
 

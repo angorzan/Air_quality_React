@@ -91,19 +91,24 @@ class AirQuality extends React.Component {
         return (
             <div>
                 <div>
-                    <div className="page-header">
-                        <h4>Check Air Quality</h4>
-                        <button onClick={this.handleClick} className="chartButton">Get your position</button>
+                    <div className="container">
+
+                        <h2>Check Air Quality</h2>
+                        <button onClick={this.handleClick} className="chartButton btn btn-info">Get your position</button>
                         {
                             this.state.chartData &&
                             <div>
-                                <div className="position">Your current position: lat: {this.state.lat}
-                                      lon: {this.state.lon}</div>
-                                <div className="air">street: {this.state.street} PM2.5 {this.state.pm25}
-                                    PM10 {this.state.pm10}</div>
+                                <div className="position container">
+                                    <p>Your current position: lat: {this.state.lat.toFixed(2)}</p>
+                                    <p>  lon: {this.state.lon.toFixed(2)} </p> </div>
+                                <div className="air container">
+                                    <p>street: {this.state.street} </p>
+                                    <p> Air quality: PM2.5  {this.state.pm25.toFixed(2)}</p>
+                                    <p> PM10  {this.state.pm10.toFixed(2)}</p></div>
                             </div>
                         }
                         <Bar data={this.state.chartData} options={this.state.chartOptions} />
+
                     </div>
 
                 </div>
